@@ -232,7 +232,7 @@
       <updated>1502975408745</updated>
       <workItem from="1502975410128" duration="6673000" />
       <workItem from="1503006673230" duration="28000" />
-      <workItem from="1503395920027" duration="11721000" />
+      <workItem from="1503395920027" duration="11783000" />
     </task>
     <task id="LOCAL-00001" summary="- extracted PHP-Code to code.php&#10;- extracted DB-Connection into config.php&#10;- JS: Creates an object with display-settings">
       <created>1503437066473</created>
@@ -262,11 +262,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503442837013</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="PUSH TO COMMIT&#10;&#10;just log-file changes">
+      <created>1503443304341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1503443304341</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18422000" />
+    <option name="totallyTimeSpent" value="18484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="2" width="1316" height="773" extended-state="0" />
@@ -302,7 +309,8 @@
     <MESSAGE value="- Added Save and Load Buttons&#10;- Save Button Creates and shows a JSON with the display-settings&#10;- Added saves Collection planned for saves display-settings" />
     <MESSAGE value="- Correcting format error" />
     <MESSAGE value="- Save and Loading sort and visible&#10;- Open Bug: Filtering" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Save and Loading sort and visible&#10;- Open Bug: Filtering" />
+    <MESSAGE value="PUSH TO COMMIT&#10;&#10;just log-file changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="PUSH TO COMMIT&#10;&#10;just log-file changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
