@@ -5,34 +5,8 @@ require 'vendor/autoload.php';
  * Create Database connection
  */
 
-
-$client = new MongoDB\Client("mongodb://localhost:27017");
-$db = $client->psdat;
-
-/** Get Data Collection */
-$data = $db->data;
-$fieldnames = getFieldnamesOfCollection($data);
-$rows = $data->find();
-
-function getFieldnamesOfCollection($collection)
-{
-    $titles = Array();
-    $dataset = $collection->find();
-    foreach ($dataset as $ds) {
-        $dstitles = array_keys(get_object_vars($ds));
-        foreach ($dstitles as $dstitle) {
-            if (!in_array($dstitle, $titles)) {
-                array_push($titles, $dstitle);
-            }
-        }
-    }
-    return $titles;
-}
-
-
-//foreach ($result as $entry) {
-//    echo $entry['policyID'], "<br/>";
-//}
+$config = include "config.php";
+include "code.php";
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +34,7 @@ function getFieldnamesOfCollection($collection)
                 // Setup - add a text input to each footer cell
                 $('#datatable thead td').each( function () {
                     var title = $(this).text();
-                    $(this).html( '<input type="text" placeholder="Filter '+title+'" />' );
+                    $(this).html( '<input type="text" id="input_'+title+'" placeholder="Filter '+title+'"/>' );
                 } );
 
                 var table = $('#datatable').DataTable({
@@ -68,8 +42,8 @@ function getFieldnamesOfCollection($collection)
                     scrollY:     h,
                     scroller:    true,
                     columnDefs: [
-                        { targets: [], visible: true},
-                        { targets: '_all', visible: true }
+                        { targets: [3], visible: true},
+                        { targets: '_all', visible: false }
                     ],
                     dom: 'Bfrtip',
                     buttons: [
@@ -103,7 +77,23 @@ function getFieldnamesOfCollection($collection)
                         }
                     } );
                 } );
+
+// CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+
+                var setting = {"columns":{}};
+                table.columns().every(function () {
+                    var column = {
+                        "id":this.index() ,
+                        "title":this.header().innerHTML ,
+                        "visibility":this.visible(),
+                        "filter":$("#input_"+this.header().innerHTML).val()
+                    };
+                    setting.columns[this.index()]= column;
+                });
+                setting.order = table.order();
+                window.alert(JSON.stringify(setting));
             } );</script>
+        <script src="displaysettings.js"></script>
     </head>
 <?php
 echo'
