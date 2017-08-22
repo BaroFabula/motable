@@ -42,7 +42,7 @@ include "code.php";
                     scrollY:     h,
                     scroller:    true,
                     columnDefs: [
-                        { targets: [3], visible: true},
+                        { targets: [0, 1, 2, 3], visible: true},
                         { targets: '_all', visible: false }
                     ],
                     dom: 'Bfrtip',
@@ -74,7 +74,7 @@ include "code.php";
                                             "id": this.index(),
                                             "title": this.header().innerHTML,
                                             "visibility": this.visible(),
-                                            "filter": $("#input_" + this.header().innerHTML).val()
+                                            //"filter": $("#input_" + this.header().innerHTML).val()
                                         };
                                         setting.columns[this.index()] = column;
                                     });
@@ -89,31 +89,23 @@ include "code.php";
                             text: 'Load Settings',
                             action: function (e, dt, node, config) {
                                 // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
-
-                                var setting = {"columns":{}};
-                                table.columns().every(function () {
-                                    var column = {
-                                        "id":this.index() ,
-                                        "title":this.header().innerHTML ,
-                                        "visibility":this.visible(),
-                                        "filter":$("#input_"+this.header().innerHTML).val()
-                                    };
-                                    setting.columns[this.index()]= column;
+                                var setting = JSON.parse(prompt("Enter settings JSON"));
+                                table.order(setting.order);
+                                jQuery.each(setting.columns, function (key, set) {
+                                    table.column(set.id).visible(set.visibility);
+                                    //$("#input_" + table.column(set.id).header().innerHTML).val(set.filter);
                                 });
-                                setting.order = table.order();
-                                setting.user = null;
-                                window.alert(JSON.stringify(setting));
+                                table.draw();
                             }
                         }
                     ],
                     "ordering": true,
                     "info":     false
-
                 });
                 table.columns().every( function () {
                     var that = this;
-
                     $( 'input', this.header() ).on( 'keyup change', function () {
+                        window.alert('est');
                         if ( that.search() !== this.value ) {
                             that
                                 .search( this.value )
