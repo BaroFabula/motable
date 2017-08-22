@@ -59,8 +59,52 @@ include "code.php";
                                 columns: ':visible'
                             }
                         },
+                        'colvis',
+                        {
+                            text: 'Save Settings',
+                            action: function (e, dt, node, config) {
+                                // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
 
-                        'colvis'
+                                var sname = prompt("Enter Savename to Save");
+                                if(sname != null && /^\w+$/.test(sname)) {
+                                    var setting = {"columns": {}};
+                                    setting.name = sname;
+                                    table.columns().every(function () {
+                                        var column = {
+                                            "id": this.index(),
+                                            "title": this.header().innerHTML,
+                                            "visibility": this.visible(),
+                                            "filter": $("#input_" + this.header().innerHTML).val()
+                                        };
+                                        setting.columns[this.index()] = column;
+                                    });
+                                    setting.order = table.order();
+                                    setting.user = null;
+
+                                    window.alert(JSON.stringify(setting));
+                                }
+                            }
+                        },
+                        {
+                            text: 'Load Settings',
+                            action: function (e, dt, node, config) {
+                                // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+
+                                var setting = {"columns":{}};
+                                table.columns().every(function () {
+                                    var column = {
+                                        "id":this.index() ,
+                                        "title":this.header().innerHTML ,
+                                        "visibility":this.visible(),
+                                        "filter":$("#input_"+this.header().innerHTML).val()
+                                    };
+                                    setting.columns[this.index()]= column;
+                                });
+                                setting.order = table.order();
+                                setting.user = null;
+                                window.alert(JSON.stringify(setting));
+                            }
+                        }
                     ],
                     "ordering": true,
                     "info":     false
@@ -77,23 +121,7 @@ include "code.php";
                         }
                     } );
                 } );
-
-// CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
-
-                var setting = {"columns":{}};
-                table.columns().every(function () {
-                    var column = {
-                        "id":this.index() ,
-                        "title":this.header().innerHTML ,
-                        "visibility":this.visible(),
-                        "filter":$("#input_"+this.header().innerHTML).val()
-                    };
-                    setting.columns[this.index()]= column;
-                });
-                setting.order = table.order();
-                window.alert(JSON.stringify(setting));
             } );</script>
-        <script src="displaysettings.js"></script>
     </head>
 <?php
 echo'
