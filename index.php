@@ -59,6 +59,12 @@ include "code.php";
                                 columns: ':visible'
                             }
                         },
+                        {
+                            extend: 'csv',
+                            exportOptions: {
+                                columns: ':visible'
+                            }
+                        },
                         'colvis',
                         {
                             text: 'Save Settings',
@@ -88,7 +94,8 @@ include "code.php";
                         {
                             text: 'Load Settings',
                             action: function (e, dt, node, config) {
-                                // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+                                // LOADING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+                                // SETTING PAGE TO OBJECTS PARAMETERS
                                 var setting = JSON.parse(prompt("Enter settings JSON"));
                                 table.order(setting.order);
                                 jQuery.each(setting.columns, function (key, set) {
