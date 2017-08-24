@@ -91,8 +91,7 @@ include "code.php";
                                     });
                                     setting.order = table.order();
                                     setting.user = null;
-
-                                    window.alert(JSON.stringify(setting));
+                                    sock.send(JSON.stringify({"type":"settingsave", "data":setting}));
                                 }
                             }
                         },
