@@ -23,6 +23,11 @@ include "code.php";
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="datatables/datatables.min.js"></script>
         <script>
+            var sock = new WebSocket("ws://localhost:5001");
+            sock.onopen = function (event) {
+                alert("Socket connected successfully");
+            };
+
             var hfspace = 200;
 
             var h = window.innerHeight-hfspace;
