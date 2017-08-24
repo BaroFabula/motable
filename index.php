@@ -25,7 +25,10 @@ include "code.php";
         <script>
             var sock = new WebSocket("ws://localhost:5001");
             sock.onopen = function (event) {
-                alert("Socket connected successfully");
+                console.log("Socket connected successfully");
+            };
+            sock.onmessage = function (msg) {
+                console.log(msg);
             };
 
             var hfspace = 200;
@@ -91,7 +94,7 @@ include "code.php";
                                     });
                                     setting.order = table.order();
                                     setting.user = null;
-                                    sock.send(JSON.stringify({"type":"settingsave", "data":setting}));
+                                    sock.send(JSON.stringify({"type":"saveSetting", "data":setting}));
                                 }
                             }
                         },
@@ -100,7 +103,8 @@ include "code.php";
                             action: function (e, dt, node, config) {
                                 // LOADING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
                                 // SETTING PAGE TO OBJECTS PARAMETERS
-                                var setting = JSON.parse(prompt("Enter settings JSON"));
+                                sock.send(JSON.stringify({"type":"getSavefiles"}));
+                                /*var setting = JSON.parse(prompt("Enter settings JSON"));
                                 table.order(setting.order);
                                 jQuery.each(setting.columns, function (key, set) {
                                     table.column(set.id).visible(set.visibility);
@@ -109,7 +113,7 @@ include "code.php";
                                         table.column(set.id).search(set.filter);
                                     }
                                 });
-                                table.draw();
+                                table.draw();*/
                             }
                         }
                     ],
