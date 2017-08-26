@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
  * Create Database connection
  */
 
-$config = include "config.php";
+$config = json_decode(file_get_contents('./config.json'));
 include "code.php";
 ?>
 
@@ -23,18 +23,15 @@ include "code.php";
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="datatables/datatables.min.js"></script>
         <script>
-            var sock = new WebSocket("ws://localhost:5001");
-            sock.onopen = function (event) {
-                console.log("Socket connected successfully");
-            };
-            sock.onmessage = function (msg) {
-                console.log(msg);
-            };
-
             var hfspace = 200;
 
             var h = window.innerHeight-hfspace;
             $(document).ready(function() {
+                $.fn.dataTable.ext.buttons.saveSetting = {
+                    action: function ( e, dt, node, config ) {
+                        alert( this.value() );
+                    }
+                };
                 window.addEventListener('resize', function () {
                     h = window.innerHeight-hfspace;
                     $('div.dataTables_scrollBody').height( h );
@@ -44,7 +41,6 @@ include "code.php";
                     var title = $(this).text();
                     $(this).html( '<input type="text" id="input_'+title+'" class="form-control input-sm" placeholder="Filter '+title+'"/>' );
                 } );
-
                 var table = $('#datatable').DataTable({
                     scrollX:     true,
                     scrollY:     h,
@@ -53,7 +49,7 @@ include "code.php";
                         { targets: [1, 2, 3, 4, 5], visible: true},
                         { targets: '_all', visible: false }
                     ],
-                    dom: 'Bfrtip',
+                    dom: 'Brtip',
                     buttons: [
                         {
                             extend: 'copyHtml5',
@@ -99,21 +95,27 @@ include "code.php";
                             }
                         },
                         {
+                            extend: 'collection',
+                            text: 'Load Settings',
+                            buttons: [
+                                {
+                                    extend: 'collection',
+                                    text: 'My Settings',
+                                    buttons:[]
+                                },
+                                {
+                                    extend: 'collection',
+                                    text: 'Public Settings',
+                                    buttons: []
+                                }
+                            ]
+                        },
+                        {
                             text: 'Load Settings',
                             action: function (e, dt, node, config) {
                                 // LOADING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
                                 // SETTING PAGE TO OBJECTS PARAMETERS
                                 sock.send(JSON.stringify({"type":"getSavefiles"}));
-                                /*var setting = JSON.parse(prompt("Enter settings JSON"));
-                                table.order(setting.order);
-                                jQuery.each(setting.columns, function (key, set) {
-                                    table.column(set.id).visible(set.visibility);
-                                    if(set.filter){
-                                        $("#input_" + table.column(set.id).header().innerHTML).val(set.filter);
-                                        table.column(set.id).search(set.filter);
-                                    }
-                                });
-                                table.draw();*/
                             }
                         }
                     ],
@@ -130,7 +132,63 @@ include "code.php";
                         }
                     } );
                 } );
-            } );</script>
+
+
+                var sock = new WebSocket("ws://localhost:5001");
+                var savedsettings = [];
+                var publicsettings = [];
+                var mysettings = [];
+
+
+
+                sock.onopen = function (event) {
+                    console.log("Socket connected successfully");
+                    sock.send('{"type":"getPublicSavefiles"}');
+                    sock.send('{"type":"getMySavefiles", "data":null}');
+                };
+                sock.onmessage = function (msg) {
+                    msg = JSON.parse(msg.data);
+                    if(msg.type == 'publicsavefiles'){
+                        var publicsavedsettings = msg.data;
+                        for(var i = 0; i < publicsavedsettings.length; i++){
+                            table.button().add('5-1-'+i,{
+                                text: publicsavedsettings[i].name,
+                                id: publicsavedsettings[i]._id,
+                                className:"dt-button buttons-collection",
+                                action: function (e, dt, node, config) {
+                                    sock.send(JSON.stringify({"type":"loadSetting","id":config.id}));
+                                }
+                            });
+                        }
+                    }
+                    if(msg.type == 'mysavefiles'){
+                        var mysavedsettings = msg.data;
+                        for(var i = 0; i < mysavedsettings.length; i++){
+                            table.button().add('5-0-'+i,{
+                                text: mysavedsettings[i].name,
+                                id: mysavedsettings[i]._id,
+                                className:"dt-button buttons-collection",
+                                action: function (e, dt, node, config) {
+                                    sock.send(JSON.stringify({"type":"loadSetting", "id":config.id}));
+                                }
+                            });
+                        }
+                    }
+                    if(msg.type == 'savefile'){
+                        var setting = msg.data[0];
+                        table.order(setting.order);
+                        jQuery.each(setting.columns, function (key, set) {
+                            table.column(set.id).visible(set.visibility);
+                            if(set.filter){
+                                $("#input_" + table.column(set.id).header().innerHTML).val(set.filter);
+                                table.column(set.id).search(set.filter);
+                            }
+                        });
+                        table.draw();
+                    }
+                };
+            } );
+        </script>
     </head>
 <?php
 echo'
