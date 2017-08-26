@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe83751d-7d98-4588-948a-e9a43c98985b" name="Default" comment="-  Sending Save-Data via Websocket to Server">
+    <list default="true" id="fe83751d-7d98-4588-948a-e9a43c98985b" name="Default" comment="init dev_api">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/websocket/index.js" afterPath="$PROJECT_DIR$/websocket/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="177" column="50" lean-forward="false" selection-start-line="177" selection-start-column="50" selection-end-line="177" selection-end-column="50" />
+            <state relative-caret-position="238">
+              <caret line="176" column="47" lean-forward="false" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
               <folding>
                 <marker date="1503734609144" expanded="true" signature="8661:8888" ph="..." />
                 <marker date="1503734609144" expanded="true" signature="8661:9232" ph="..." />
@@ -64,6 +61,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -244,7 +246,7 @@
       <workItem from="1503395920027" duration="18406000" />
       <workItem from="1503598298065" duration="4508000" />
       <workItem from="1503606997777" duration="1844000" />
-      <workItem from="1503661043328" duration="18266000" />
+      <workItem from="1503661043328" duration="19053000" />
     </task>
     <task id="LOCAL-00001" summary="- extracted PHP-Code to code.php&#10;- extracted DB-Connection into config.php&#10;- JS: Creates an object with display-settings">
       <created>1503437066473</created>
@@ -330,16 +332,24 @@
       <option name="project" value="LOCAL" />
       <updated>1503608820527</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- config changed to json-format&#10;- save and load from Mongo-DB Database works">
+      <created>1503734660353</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1503734660353</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49725000" />
+    <option name="totallyTimeSpent" value="50512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24923313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24923313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -376,7 +386,8 @@
     <MESSAGE value="-  Websocket Connection" />
     <MESSAGE value="-  Sending Save-Data via Websocket to Server" />
     <MESSAGE value="- Saving and Loading from MongoDB&#10;- OPEN BUG: Sending Loaded Data from Server to Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Saving and Loading from MongoDB&#10;- OPEN BUG: Sending Loaded Data from Server to Client" />
+    <MESSAGE value="- config changed to json-format&#10;- save and load from Mongo-DB Database works" />
+    <option name="LAST_COMMIT_MESSAGE" value="- config changed to json-format&#10;- save and load from Mongo-DB Database works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -681,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="177" column="50" lean-forward="false" selection-start-line="177" selection-start-column="50" selection-end-line="177" selection-end-column="50" />
+        <state relative-caret-position="238">
+          <caret line="176" column="47" lean-forward="false" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
           <folding>
             <marker date="1503734609144" expanded="true" signature="8661:8888" ph="..." />
             <marker date="1503734609144" expanded="true" signature="8661:9232" ph="..." />
