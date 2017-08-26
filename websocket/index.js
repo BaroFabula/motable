@@ -52,7 +52,6 @@ s.on('connection', function (ws) {
                 });
             }
         }
-
         if(msg.type == "loadSetting"){
             if (config.dbtype == 'mongodb') {
                 if (msg.id != '' && msg.id != null) {

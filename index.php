@@ -46,7 +46,7 @@ include "code.php";
                     scrollY:     h,
                     scroller:    true,
                     columnDefs: [
-                        { targets: [1, 2, 3, 4, 5], visible: true},
+                        { targets: '_all', visible: true},
                         { targets: '_all', visible: false }
                     ],
                     dom: 'Brtip',
@@ -196,31 +196,32 @@ echo'
         <div class="container">
             <div class="row">
                 <table id="datatable" class="table table-striped table-bordered" width="100%" cellspacing="0">
-            <thead>
-            <tr>
-                ';foreach ($fieldnames as $fieldname){echo'
-                <td>'.$fieldname.'</td>
-                ';}echo'
-            </tr>
-            <tr>
-                ';foreach ($fieldnames as $fieldname){echo'
-                <th>'.$fieldname.'</th>
-                ';}echo'
-            </tr>
-            </thead>
-            <tbody>
-                ';
-            foreach ($rows as $row){echo'
-            <tr>
-                ';foreach ($fieldnames as $fieldname){echo'
-                <td>';if(isset($row[$fieldname])){echo $row[$fieldname];};echo'</td>
-                ';}echo'
-            </tr>
-                ';}
+                    <thead>
+                    <tr>
+                        ';foreach ($fieldnames as $fieldname){echo'
+                        <td>'.$fieldname.'</td>
+                        ';}echo'
+                    </tr>
+                    <tr>
+                        ';foreach ($fieldnames as $fieldname){echo'
+                        <th>'.$fieldname.'</th>
+                        ';}echo'
+                    </tr>
+                    </thead>
+                    <tbody>
+                        ';
+                    foreach ($rows as $row){echo'
+                    <tr>
+                        ';
+                        foreach ($fieldnames as $fieldname){echo'
+                        <td>';if(isset($row->{$fieldname})){echo $row->{$fieldname};};echo'</td>
+                        ';}echo'
+                    </tr>
+                        ';}
 
-            echo'
-            </tbody>
-        </table>
+                    echo'
+                    </tbody>
+                </table>
             </div>
         </div>
         </body>
