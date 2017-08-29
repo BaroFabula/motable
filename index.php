@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-
 /**
  * Create Database connection
  */
@@ -19,10 +18,16 @@ include "code.php";
 
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="datatables/datatables.min.css">
+        <link rel="stylesheet" href="main.css">
         <script src="jquery/jquery-3.2.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="datatables/datatables.min.js"></script>
+        <script src="jszip/jszip.min.js"></script>
         <script>
+            function cellEditable(cell){
+                console.log('works');
+            }
+
             var hfspace = 200;
 
             var h = window.innerHeight-hfspace;
@@ -52,24 +57,9 @@ include "code.php";
                     dom: 'Brtip',
                     buttons: [
                         {
-                            extend: 'copyHtml5',
-                            exportOptions: {
-                                columns: ':visible'
-                            }
+                            extend:'colvis',
+                            collectionLayout: 'fixed four-column'
                         },
-                        {
-                            extend: 'excel',
-                            exportOptions: {
-                                columns: ':visible'
-                            }
-                        },
-                        {
-                            extend: 'csv',
-                            exportOptions: {
-                                columns: ':visible'
-                            }
-                        },
-                        'colvis',
                         {
                             text: 'Save Settings',
                             action: function (e, dt, node, config) {
@@ -97,6 +87,7 @@ include "code.php";
                         {
                             extend: 'collection',
                             text: 'Load Settings',
+                            autoclose:true,
                             buttons: [
                                 {
                                     extend: 'collection',
@@ -111,17 +102,59 @@ include "code.php";
                             ]
                         },
                         {
-                            text: 'Load Settings',
-                            action: function (e, dt, node, config) {
-                                // LOADING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
-                                // SETTING PAGE TO OBJECTS PARAMETERS
-                                sock.send(JSON.stringify({"type":"getSavefiles"}));
-                            }
+                            extend:'collection',
+                            text:'Export',
+                            autoclose:true,
+                            buttons:
+                            [
+                                {
+                                    text:'Clipboard',
+                                    extend: 'copyHtml5',
+                                    exportOptions: {
+                                        columns: ':visible'
+                                    }
+                                },
+                                {
+                                    text:'xlsx-File',
+                                    extend: 'excelHtml5',
+                                    exportOptions: {
+                                        columns: ':visible'
+                                    }
+                                },
+                                {
+                                    text:'csv-File',
+                                    extend: 'csv',
+                                    exportOptions: {
+                                        columns: ':visible'
+                                    }
+                                },
+                                {
+                                    text:'Printview',
+                                    extend: 'print',
+                                    exportOptions: {
+                                        columns: ':visible'
+                                    }
+                                },
+                            ]
                         }
+
                     ],
                     "ordering": true,
-                    "info":     false
+                    "info":     false,
+                    "keys": true
                 });
+                table.on( 'key', function ( e, datatable, key, cell, originalEvent ) {
+                    if(key == 13){
+                        cellEditable(cell);
+                    }
+                    //console.log(cell.index());
+                    //console.log(cell.data());
+                    console.log(key);
+                } )
+                    .on('dblclick','tr', function (cell) {
+                        cellEditable(cell);
+                    });
+
                 table.columns().every( function () {
                     var that = this;
                     $('#input_'+this.header().innerHTML).on( 'keyup change', function () {
