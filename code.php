@@ -18,6 +18,7 @@ if($config->dbtype == "api"){
         )
     ));
 
+    $h = get_headers($api->dburl);
     $prerows = json_decode(file_get_contents($api->dburl, false, $context))->results;
     $rows = array();
     foreach ($prerows as $pr){

@@ -3,5 +3,6 @@
     "dburl" : "mongodb://localhost:27017",
     "dbname" : "psdat",
     "collection" : "data",
+    "key" : "_id",
     "saves" : "saves"
 }

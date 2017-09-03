@@ -24,6 +24,7 @@ s.on('connection', function (ws) {
                         if (err) throw err;
                         console.log(res);
                         db.close();
+                        ws.send(JSON.stringify({"type":"reloadButtons"}));
                     });
                 });
             }
@@ -67,6 +68,20 @@ s.on('connection', function (ws) {
                 }
             }
         }
-
+        if(msg.type == "saveChange"){
+            console.log(msg);
+            if (config.dbtype == 'mongodb') {
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) throw err;
+                        var o_id = new mongo.ObjectID(msg.key);
+                        var set = {}; set[msg.prop] = msg.data;
+                        db.collection(config.collection).update({"_id":o_id},{$set:set},{},function (err, obj) {
+                            if(err){
+                                ws.send(JSON.stringify({"type":"error", "data":"dbsave"}));
+                            }
+                        });
+                    });
+                }
+        }
     });
 });
