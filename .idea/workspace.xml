@@ -2,10 +2,634 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe83751d-7d98-4588-948a-e9a43c98985b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/logout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/datatables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/js.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jszip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/table.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/client.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/client.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/client.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/datatables.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/buttons.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/common.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/css/mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.colVis.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.colVis.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.flash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.flash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.html5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.print.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.semanticui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/buttons.semanticui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/dataTables.buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/js/dataTables.buttons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Buttons-1.3.1/swf/flashExport.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/css/colReorder.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/js/dataTables.colReorder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/ColReorder-1.3.3/js/dataTables.colReorder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/dataTables.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/jquery.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/jquery.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/css/jquery.dataTables_themeroller.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/images/sort_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/images/sort_asc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/images/sort_both.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/images/sort_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/images/sort_desc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.semanticui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/dataTables.semanticui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/DataTables-1.10.15/js/jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/css/fixedColumns.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/js/dataTables.fixedColumns.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedColumns-3.2.2/js/dataTables.fixedColumns.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/css/fixedHeader.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/js/dataTables.fixedHeader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/FixedHeader-3.1.2/js/dataTables.fixedHeader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/css/keyTable.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/js/dataTables.keyTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/KeyTable-2.2.1/js/dataTables.keyTable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/css/responsive.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/dataTables.responsive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/dataTables.responsive.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Responsive-2.1.1/js/responsive.jqueryui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.bootstrap4.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.bootstrap4.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/css/rowGroup.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/js/dataTables.rowGroup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowGroup-1.0.0/js/dataTables.rowGroup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/css/rowReorder.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/js/dataTables.rowReorder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/RowReorder-1.2.0/js/dataTables.rowReorder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/css/scroller.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/js/dataTables.scroller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Scroller-1.4.2/js/dataTables.scroller.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.dataTables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.dataTables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.jqueryui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.jqueryui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.semanticui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/css/select.semanticui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/js/dataTables.select.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/Select-1.2.2/js/dataTables.select.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/datatables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/datatables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/datatables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/datatables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/pdfmake-0.1.27/build/pdfmake.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/pdfmake-0.1.27/build/pdfmake.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datatables/pdfmake-0.1.27/build/vfs_fonts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery/jquery-3.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/code.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/tbl/display.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/websocket/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old/websocket/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/.static/.mongodb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/images/save-flowchart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-construct-driverOptions.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-construct-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-dropDatabase-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-dropDatabase-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-get-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-listDatabases-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-listDatabases-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-selectCollection-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-selectCollection-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-selectDatabase-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBClient-method-selectDatabase-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-common-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-common-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-aggregate-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-aggregate-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-bulkWrite-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-bulkWrite-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-construct-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-construct-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-count-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-count-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-createIndex-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-createIndex-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-createIndexes-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-createIndexes-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-deleteMany-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-deleteMany-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-deleteOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-deleteOne-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-distinct-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-distinct-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-drop-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-drop-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-dropIndex-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-dropIndex-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-dropIndexes-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-dropIndexes-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-find-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-find-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOne-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndDelete-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndDelete-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndReplace-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndReplace-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndUpdate-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-findOneAndUpdate-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-insertMany-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-insertMany-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-insertOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-insertOne-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-listIndexes-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-listIndexes-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-replaceOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-replaceOne-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-updateMany-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-updateMany-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-updateOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-updateOne-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-withOptions-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBCollection-method-withOptions-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-common-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-command-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-command-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-construct-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-construct-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-createCollection-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-createCollection-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-drop-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-drop-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-dropCollection-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-dropCollection-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-get-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-listCollections-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-listCollections-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-selectCollection-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-selectCollection-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-selectGridFSBucket-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-selectGridFSBucket-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-withOptions-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBDatabase-method-withOptions-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-common-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-common-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-construct-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-construct-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-delete-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-downloadToStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-downloadToStreamByName-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-downloadToStreamByName-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-find-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-findOne-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-getFileDocumentForStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-getFileIdForStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-openDownloadStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-openDownloadStreamByName-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-openDownloadStreamByName-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-openUploadStream-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-openUploadStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-rename-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-uploadFromStream-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-MongoDBGridFSBucket-method-uploadFromStream-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-common-option.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/apiargs-common-param.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/extracts-bulkwriteexception.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/extracts-error.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/includes/extracts-note.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/index.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/pretty.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/bson.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/class/MongoDBClient.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/class/MongoDBCollection.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/class/MongoDBDatabase.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/class/MongoDBGridFSBucket.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/enumeration-classes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/exception-classes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getDeletedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getInsertedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getInsertedIds.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getMatchedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getModifiedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getUpsertedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-getUpsertedIds.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBBulkWriteResult-isAcknowledged.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient-dropDatabase.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient-getManager.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient-listDatabases.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient-selectCollection.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient-selectDatabase.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient__construct.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBClient__get.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-aggregate.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-bulkWrite.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-count.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-createIndex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-createIndexes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-deleteMany.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-deleteOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-distinct.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-drop.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-dropIndex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-dropIndexes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-find.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-findOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-findOneAndDelete.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-findOneAndReplace.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-findOneAndUpdate.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-getCollectionName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-getDatabaseName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-getManager.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-getNamespace.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-insertMany.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-insertOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-listIndexes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-replaceOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-updateMany.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-updateOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection-withOptions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBCollection__construct.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-command.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-createCollection.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-drop.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-dropCollection.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-getDatabaseName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-getManager.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-listCollections.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-selectCollection.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-selectGridFSBucket.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase-withOptions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase__construct.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDatabase__get.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDeleteResult-getDeletedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBDeleteResult-isAcknowledged.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-delete.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-downloadToStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-downloadToStreamByName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-drop.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-find.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-findOne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-getBucketName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-getDatabaseName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-getFileDocumentForStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-getFileIdForStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-openDownloadStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-openDownloadStreamByName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-openUploadStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-rename.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket-uploadFromStream.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBGridFSBucket__construct.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertManyResult-getInsertedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertManyResult-getInsertedIds.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertManyResult-isAcknowledged.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertOneResult-getInsertedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertOneResult-getInsertedId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBInsertOneResult-isAcknowledged.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelCollectionInfo-getCappedMax.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelCollectionInfo-getCappedSize.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelCollectionInfo-getName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelCollectionInfo-getOptions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelCollectionInfo-isCapped.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelDatabaseInfo-getName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelDatabaseInfo-getSizeOnDisk.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelDatabaseInfo-isEmpty.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-getKey.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-getName.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-getNamespace.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-getVersion.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-isSparse.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-isTtl.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBModelIndexInfo-isUnique.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBUpdateResult-getMatchedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBUpdateResult-getModifiedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBUpdateResult-getUpsertedCount.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBUpdateResult-getUpsertedId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/method/MongoDBUpdateResult-isAcknowledged.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/reference/write-result-classes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/collation.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/commands.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/crud.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/decimal128.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/example-data.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/gridfs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/indexes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/install-php-library.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/upgrade.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/BulkWriteResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/DeleteResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/BadMethodCallException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/InvalidArgumentException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/RuntimeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/UnexpectedValueException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Exception/UnsupportedException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/Bucket.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/CollectionWrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/Exception/CorruptFileException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/Exception/FileNotFoundException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/ReadableStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/StreamWrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/GridFS/WritableStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertManyResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertOneResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/BSONArray.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/BSONDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfoCommandIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfoIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfoLegacyIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/DatabaseInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/DatabaseInfoIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/DatabaseInfoLegacyIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInfoIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInfoIteratorIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInput.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/TypeMapArrayIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Aggregate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/BulkWrite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Count.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/CreateCollection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/CreateIndexes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DatabaseCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Delete.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DeleteMany.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DeleteOne.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Distinct.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DropCollection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DropDatabase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DropIndexes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Executable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Find.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindAndModify.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindOne.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindOneAndDelete.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindOneAndReplace.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindOneAndUpdate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/InsertMany.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/InsertOne.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/ListCollections.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/ListDatabases.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/ListIndexes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/ReplaceOne.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/Update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/UpdateMany.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/UpdateOne.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/UpdateResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/ClientFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/ClientTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/CollectionFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/CrudSpecFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/aggregate-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/aggregate-out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/aggregate.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/count-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/count.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/distinct-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/distinct.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/find-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/read/find.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/deleteMany-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/deleteMany.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/deleteOne-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/deleteOne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndDelete-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndDelete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndReplace-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndReplace-upsert.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndReplace-upsert_pre_2.6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndReplace.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndUpdate-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/findOneAndUpdate.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/insertMany.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/insertOne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/replaceOne-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/replaceOne-pre_2.6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/replaceOne-upsert.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/replaceOne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateMany-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateMany-pre_2.6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateMany.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateOne-collation.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateOne-pre_2.6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Collection/spec-tests/write/updateOne.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Database/CollectionManagementFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Database/DatabaseFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Database/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/FunctionsTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/BucketFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/ReadableStreamFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/SpecFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/StreamWrapperFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/WritableStreamFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/spec-tests/delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/spec-tests/download.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/spec-tests/download_by_name.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/GridFS/spec-tests/upload.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/BSONArrayTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/BSONDocumentTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/CollectionInfoTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/DatabaseInfoTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/IndexInfoTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Model/IndexInputTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/AggregateFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/AggregateTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/BulkWriteFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/BulkWriteTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/CountTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/CreateCollectionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/CreateIndexesFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/CreateIndexesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DatabaseCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DeleteFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DeleteTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DistinctTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropCollectionFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropCollectionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropDatabaseFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropDatabaseTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropIndexesFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/DropIndexesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindAndModifyFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindAndModifyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindOneAndDeleteTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindOneAndReplaceTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindOneAndUpdateTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindOneFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FindTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/InsertManyFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/InsertManyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/InsertOneFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/InsertOneTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/ListCollectionsFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/ListDatabasesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/ListIndexesFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/ListIndexesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/ReplaceOneTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/TestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/UpdateFunctionalTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/UpdateManyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/UpdateOneTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/Operation/UpdateTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/PedantryTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/TestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/bootstrap.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,106 +638,54 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ComposerSettings" doNotAsk="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-                <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-                <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-                <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-                <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="code.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="251" column="3" lean-forward="false" selection-start-line="251" selection-start-column="3" selection-end-line="251" selection-end-column="3" />
+            <state relative-caret-position="34">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tbl/display.php">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-              <folding>
-                <marker date="1504442530956" expanded="true" signature="72:1241" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="183:1222" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="211:667" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="236:261" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="236:411" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="436:461" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="436:638" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="695:720" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="695:1197" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="797:822" ph="..." />
-                <marker date="1504442530956" expanded="true" signature="797:1090" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="283">
+              <caret line="280" column="38" lean-forward="false" selection-start-line="280" selection-start-column="38" selection-end-line="280" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/websocket/index.js">
+      <file leaf-file-name="table.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-                <element signature="e#1083#1522#0" expanded="false" />
-                <element signature="e#1620#2070#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="code.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="385">
+              <caret line="156" column="14" lean-forward="false" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config-api.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-api.json">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+              <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -124,6 +696,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Sass File" />
+        <option value="Pug File" />
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
@@ -136,7 +711,16 @@
       <find>config.json</find>
       <find>keyColumnId</find>
       <find>\</find>
+      <find>sendHtml</find>
+      <find>&quot;</find>
+      <find>testext</find>
+      <find>-&gt;$o</find>
+      <find>-&gt;</find>
+      <find>setting</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,33 +739,84 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/websocket/config-api.js" />
         <option value="$PROJECT_DIR$/websocket/config-api.json" />
-        <option value="$PROJECT_DIR$/config-api.json" />
         <option value="$PROJECT_DIR$/code.php" />
         <option value="$PROJECT_DIR$/tbl/display.php" />
-        <option value="$PROJECT_DIR$/websocket/index.js" />
-        <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/code.js" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/websocket/app.js" />
+        <option value="$PROJECT_DIR$/handle.js" />
+        <option value="$PROJECT_DIR$/websocket/index.js" />
+        <option value="$PROJECT_DIR$/logger.js" />
+        <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/bootstrap 3.3.7/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/client/table.html" />
+        <option value="$PROJECT_DIR$/index.pug" />
+        <option value="$PROJECT_DIR$/code.js" />
+        <option value="$PROJECT_DIR$/.eslintrc.json" />
+        <option value="$PROJECT_DIR$/client/logout.html" />
+        <option value="$PROJECT_DIR$/js/js-cookie.js" />
+        <option value="$PROJECT_DIR$/js/mongodb.js" />
+        <option value="$PROJECT_DIR$/config-api.json" />
+        <option value="$PROJECT_DIR$/js/api.js" />
+        <option value="$PROJECT_DIR$/js/db/api.js" />
+        <option value="$PROJECT_DIR$/db/api.js" />
+        <option value="$PROJECT_DIR$/client/login.html" />
+        <option value="$PROJECT_DIR$/client/table.pug" />
+        <option value="$PROJECT_DIR$/sass/client.sass" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/test/dt.css" />
+        <option value="$PROJECT_DIR$/test/jq.js" />
+        <option value="$PROJECT_DIR$/test/dt.js" />
+        <option value="$PROJECT_DIR$/datatables/datatables.js" />
+        <option value="$PROJECT_DIR$/js/datatables.js" />
+        <option value="$PROJECT_DIR$/sass/datatables.css" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/old/table.js" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/js/client.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/js/table.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
-    <handled-path value="$PROJECT_DIR$/websocket/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="54" />
     <option name="y" value="-8" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -201,44 +836,33 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="psdat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbl" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="psdat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psdat" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="psdat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psdat" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="client" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="psdat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psdat" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fonts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="psdat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psdat" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="psdat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psdat" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -247,12 +871,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tables" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Pug/Jade" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.4.0" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="E:\xampp\htdocs\psdat\node_modules\eslint" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="E:\xampp\htdocs\psdat\node_modules\eslint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\psdat\old" />
+      <recent name="E:\xampp\htdocs\psdat\js" />
+      <recent name="E:\xampp\htdocs\psdat\db" />
+      <recent name="E:\xampp\htdocs\psdat" />
+      <recent name="E:\xampp\htdocs\psdat\js\db" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\psdat" />
     </key>
   </component>
@@ -269,6 +911,14 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -305,15 +955,6 @@
     </configuration>
     <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
       <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -356,7 +997,19 @@
       <workItem from="1503958085106" duration="2919000" />
       <workItem from="1503994480387" duration="757000" />
       <workItem from="1503995998945" duration="8408000" />
-      <workItem from="1504247545062" duration="44860000" />
+      <workItem from="1504247545062" duration="60216000" />
+      <workItem from="1504702979066" duration="142000" />
+      <workItem from="1504703144280" duration="641000" />
+      <workItem from="1504728679598" duration="9067000" />
+      <workItem from="1504788423624" duration="6086000" />
+      <workItem from="1504794544353" duration="7432000" />
+      <workItem from="1504865846864" duration="1099000" />
+      <workItem from="1504874845532" duration="59122000" />
+      <workItem from="1505206659892" duration="675000" />
+      <workItem from="1505207693619" duration="8665000" />
+      <workItem from="1505217004654" duration="8826000" />
+      <workItem from="1505257337767" duration="10519000" />
+      <workItem from="1505298266370" duration="5972000" />
     </task>
     <task id="LOCAL-00001" summary="- extracted PHP-Code to code.php&#10;- extracted DB-Connection into config.php&#10;- JS: Creates an object with display-settings">
       <created>1503437066473</created>
@@ -484,21 +1137,28 @@
       <option name="project" value="LOCAL" />
       <updated>1504473170699</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- extract JS Code">
+      <created>1504533229383</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1504533229383</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116824000" />
+    <option name="totallyTimeSpent" value="250426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24923313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280943" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24888226" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -508,12 +1168,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -536,7 +1196,8 @@
     <MESSAGE value="- get Data from API" />
     <MESSAGE value="- Minor Changes in Display, Buttons etc." />
     <MESSAGE value="- Editor added" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Editor added" />
+    <MESSAGE value="- extract JS Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="- extract JS Code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -546,193 +1207,11 @@
           <line>13</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -741,163 +1220,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="71" lean-forward="true" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="81" lean-forward="false" selection-start-line="93" selection-start-column="81" selection-end-line="93" selection-end-column="81" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,17 +1248,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/package.json">
+    <entry file="file://$PROJECT_DIR$/old/websocket/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -935,97 +1263,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datatables/datatables.js">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_datatables.altEditor.free.zip/js/altEditor/dataTables.altEditor.free.js" />
+    <entry file="file://$PROJECT_DIR$/handle.js" />
+    <entry file="file://$PROJECT_DIR$/logger.js" />
+    <entry file="file://$PROJECT_DIR$/sass/client.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-919">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_datatables.altEditor.free.zip/js/altEditor/dataTables.altEditor.free.js" />
-    <entry file="file://$PROJECT_DIR$/config-api.json">
+    <entry file="file://$PROJECT_DIR$/bootstrap 3.3.7/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3060">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/table.html" />
+    <entry file="file://$PROJECT_DIR$/index.pug" />
+    <entry file="file://$PROJECT_DIR$/client/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/table.pug" />
+    <entry file="file://$PROJECT_DIR$/sass/client.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/client.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/tbl/display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jszip.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/db/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/db/mongodb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/db/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/websocket/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/js.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datatables/datatables.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dt.css" />
+    <entry file="file://$PROJECT_DIR$/test/jq.js" />
+    <entry file="file://$PROJECT_DIR$/datatables/datatables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/test/dt.js" />
+    <entry file="file://$PROJECT_DIR$/js/datatables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="171">
+          <caret line="594" column="488" lean-forward="true" selection-start-line="594" selection-start-column="488" selection-end-line="594" selection-end-column="488" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/datatables.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="230" column="19" lean-forward="false" selection-start-line="222" selection-start-column="6" selection-end-line="230" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tbl/display.php">
+    <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding>
-            <marker date="1504442530956" expanded="true" signature="72:1241" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="183:1222" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="211:667" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="236:261" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="236:411" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="436:461" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="436:638" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="695:720" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="695:1197" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="797:822" ph="..." />
-            <marker date="1504442530956" expanded="true" signature="797:1090" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="17">
+          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="251" column="3" lean-forward="false" selection-start-line="251" selection-start-column="3" selection-end-line="251" selection-end-column="3" />
+        <state relative-caret-position="283">
+          <caret line="280" column="38" lean-forward="false" selection-start-line="280" selection-start-column="38" selection-end-line="280" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/index.js">
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#1083#1522#0" expanded="false" />
-            <element signature="e#1620#2070#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1504533197470" expanded="true" signature="826:925" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:933" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="826:1007" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="877:892" ph="..." />
-            <marker date="1504533197470" expanded="true" signature="924:925" ph="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="156" column="14" lean-forward="false" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

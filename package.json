@@ -1,0 +1,35 @@
+{
+  "name": "psdat",
+  "version": "0.1.0",
+  "description": "MoTable is a Web-Interface basing on Datatables to filter, sort and export large collections from MongoDB.\r This is a first setup and still construction, so there might be a lot changes.",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "bson": "1.0.4",
+    "cookie-parser": "1.4.3",
+    "express": "^4.15.4",
+    "jquery": "3.2.1",
+    "winston": "2.3.1",
+    "ws": "3.1.0"
+  },
+  "devDependencies": {
+    "assertthat": "0.10.3",
+    "nodemon": "^1.12.0",
+    "eslint": "4.6.1",
+    "eslint-config-es": "0.8.11",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaroFabula/motable.git"
+  },
+  "author": "Bernd Potthast",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/BaroFabula/motable/issues"
+  },
+  "homepage": "https://github.com/BaroFabula/motable#readme"
+}

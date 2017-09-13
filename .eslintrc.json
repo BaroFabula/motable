@@ -1,0 +1,15 @@
+{
+  "extends": "es/2015/server",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true
+  },
+  "rules":{
+    "linebreak-style":[
+      "warn",
+      "windows"
+    ]
+  }
+}
