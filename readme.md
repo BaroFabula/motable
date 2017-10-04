@@ -9,8 +9,7 @@ Just put this on your server, set the database connection to your MongoDB and st
 
 ### Prerequisites
 
-PHP 7.1
-MongoDB 3.4
+node.js v8.4.0
 
 Lower versions are neither tested nor supported so far.
 

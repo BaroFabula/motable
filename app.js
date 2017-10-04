@@ -10,9 +10,7 @@ const fs = require('fs');
 
 const express = require('express');
 const winston = require('winston');
-const BSON = require('bson');
 
-const bson = new BSON();
 const app = express();
 const server = http.createServer(app);
 const wsServer = new ws.Server({ server });
@@ -20,9 +18,12 @@ const wsServer = new ws.Server({ server });
 const htmlLogin = fs.readFileSync(path.join(__dirname, 'client', 'login.html'), 'utf8');
 const htmlLogout = fs.readFileSync(path.join(__dirname, 'client', 'logout.html'), 'utf8');
 
-//const api = require('./db/api');
-
-
+const broadcast = msg => {
+  wsServer.clients.forEach(client => {
+    console.log(client);
+    client.send(JSON.stringify(msg));
+  });
+};
 
 wsServer.on('connection', socket => {
   winston.log('info', `Websocket connection created by client`);
@@ -64,12 +65,14 @@ wsServer.on('connection', socket => {
         }
       });
     }
+
     return headers;
   };
 
   const getTable = data => {
     const headers = getColumnNames(data, '');
     let html = '<table id="motable" class="table table-striped table-bordered" width="100%" cellspacing="0"><thead>';
+
     for (let header in headers) {
       html = `${html}<td><input id="input_${headers[header].replace('$', '0x24').replace(' - ', '')}"class="form-control input-sm" placeholder="Filter ${headers[header]}" type="text"></td>`;
     }
@@ -92,7 +95,7 @@ wsServer.on('connection', socket => {
             val = '';
           }
         }
-        html = `${html}<td id="cell_${row}_${col}">${val}</td>`;
+        html = `${html}<td id="cell_${row}_${col}" class="${headers[header]} ${dat['_id']['$oid']}">${val}</td>`;
         col++;
       }
       html = `${html}</tr>`;
@@ -100,34 +103,50 @@ wsServer.on('connection', socket => {
       row++;
     });
     html = `${html}</tbody></table>`;
+
     return html;
+  };
+
+  const setCookie = rawcookie => {
+    const myCookie = `${rawcookie}`.replace(`[`, ``).replace(`'`, ``).replace(`]`, ``).replace(` `, ``).split(';');
+
+    for (let i = 0; i < myCookie.length; i++) {
+      if (myCookie[i].indexOf('JSESSIONID=') !== -1) {
+        socket.send(JSON.stringify({ type: 'cookie', function: 'set', cookie: 'motable', value: `${myCookie[i]};` }));
+        session = `${myCookie[i]};`;
+      }
+    }
   };
 
   const getData = (socket, options) => {
     https.get(options, res => {
-      if (res.headers['set-cookie']) {
-        const myCookie = `${res.headers['set-cookie']}`.replace(`[`, ``).replace(`'`, ``).replace(`]`, ``).replace(` `, ``).split(';');
+      console.log('STATUS: ' + res.statusCode);
+      console.log('HEADERS: ' + JSON.stringify(res.headers));
+      res.setEncoding('utf8');
+      if (res.statusCode != 200) {
+        sendHtml(socket, 'content', 'The connection to the Datenbase isn\'t working properly.');
+      }else{
+        if (res.headers['set-cookie']) {
+          setCookie(res.headers['set-cookie']);
+        }
+        res.on('data', function(chunk) {
+          console.log(chunk);
+          const result = JSON.parse(chunk);
 
-        for (let i = 0; i < myCookie.length; i++) {
-          if (myCookie[i].indexOf('JSESSIONID=') !== -1) {
-            socket.send(JSON.stringify({ type: 'cookie', function: 'set', cookie: 'motable', value: `${myCookie[i]};` }));
-            session = `${myCookie[i]};`;
+
+          if (result.status === 200) {
+            winston.log('info', `${result.status}`);
+            console.log('test');
+            const tbl = getTable(JSON.parse(chunk).results);
+
+            sendHtml(socket, 'divLog', htmlLogout);
+            sendHtml(socket, 'content', tbl);
+          } else {
+            winston.log('warn', `${result.status} ${result.error}`);
+            logout(socket);
           }
-        }
+        });
       }
-      res.on('data', function(chunk) {
-        let result = JSON.parse(chunk);
-        if (result.status === 200) {
-          winston.log('info', `${result.status}`);
-          const tbl = getTable(JSON.parse(chunk).results);
-
-          sendHtml(socket, 'divLog', htmlLogout);
-          sendHtml(socket, 'content', tbl);
-        } else {
-          winston.log('warn', `${result.status} ${result.error}`);
-          logout(socket);
-        }
-      });
     }).on('error', function(e) {
       winston.log('error: ', e.message);
     });
@@ -155,6 +174,47 @@ wsServer.on('connection', socket => {
     );
   };
 
+  // TODO
+  const updateDatafield = (socket, session, msg) => {
+    console.log(msg);
+    const header = {
+      host: 'trapdb.kskserver.de',
+      path: `/api/patients/${msg.key}`,
+      headers: {
+        Cookie: session
+      }
+    };
+    https.get(header, res => {
+      if (res.headers['set-cookie']) {
+        setCookie(res.headers['set-cookie']);
+      }
+      res.on('data', function(chunk) {
+        const result = JSON.parse(chunk);
+
+        if (result.status === 200) {
+          winston.log('info', `Status: ${result.status}`);
+
+          broadcast({
+            type: 'cell',
+            function: 'update',
+            data: {
+              id: result.results[0]['_id']['$oid'],
+              col: msg.prop,
+              value: result.results[0][msg.prop]
+            }
+          });
+        } else {
+          winston.log('warn', `${result.status} ${result.error}`);
+          logout(socket);
+        }
+      });
+    }).on('error', function(e) {
+      winston.log('error: ', e.message);
+    });
+  };
+
+
+
   const filterExtras = (data, type) => {
     const ret = [];
 
@@ -175,18 +235,14 @@ wsServer.on('connection', socket => {
         Cookie: myCookie
       }
     };
+
     https.get(header, res => {
       if (res.headers['set-cookie']) {
-        const myCookie = `${res.headers['set-cookie']}`.replace(`[`, ``).replace(`'`, ``).replace(`]`, ``).replace(` `, ``).split(';');
-
-        for (let i = 0; i < myCookie.length; i++) {
-          if (myCookie[i].indexOf('JSESSIONID=') !== -1) {
-            socket.send(JSON.stringify({ type: 'cookie', function: 'set', cookie: 'motable', value: `${myCookie[i]};` }));
-          }
-        }
+        setCookie(res.headers['set-cookie']);
       }
       res.on('data', function(chunk) {
         const result = JSON.parse(chunk);
+
         if (result.status === 200) {
           winston.log('info', `${result.status}`);
           const views = filterExtras(result.results, 'saveView');
@@ -289,6 +345,7 @@ wsServer.on('connection', socket => {
       });
       res.on('end', () => {
         console.log('No more data in response.');
+        updateDatafield(socket, session, msg);
       });
     });
 

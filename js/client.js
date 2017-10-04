@@ -2,21 +2,75 @@
 
 'use strict';
 
-const sock = new WebSocket('ws://localhost:3000');
-var myTable = null;
 
-sock.onopen = function () {
+
+const sock = new WebSocket('ws://localhost:3000');
+const hfspace = 200;
+let viewheight = window.innerHeight - hfspace;
+let edit = false;
+let myTable = null;
+
+/**
+ * This function adds a button to load the view at position i of the buttoncollection 2.
+ * @param view
+ * @param i
+ */
+const addLoadButton = (view, i) => {
+  myTable.button().add(`2-${i}`, {
+    text: view[i].data.name,
+    id: view[i]._id,
+    className: 'dt-button buttons-collection',
+    action (e, dt, node, config) {
+      myTable.order(view[i].data.order);
+      jQuery.each(view[i].data.columns, (key, set) => {
+        myTable.column(set.id).visible(set.visibility);
+        if (set.filter) {
+          $(`#input_${myTable.column(set.id).header().innerHTML}`).val(set.filter);
+          myTable.column(set.id).search(set.filter);
+        }
+      });
+      myTable.draw();
+    }
+  });
 };
 
+/**
+ * This function adds a button to delete the view at position i of the buttoncollection 2.
+ * @param view
+ * @param i
+ */
+const addDeleteButton = (view, i) => {
+  myTable.button().add(`3-${i}`, {
+    text: view[i].data.name,
+    id: view[i]._id,
+    className: 'dt-button buttons-collection',
+    action (e, dt, node, config) {
+      if (confirm('Are you sure you want to delete this view?') === true) {
+        sock.send(JSON.stringify({type: 'deleteView', id: config.id}));
+      }
+    }
+  });
+};
+
+const updateCell = (key, col, val) => {
+  const index = myTable.cell(`.${col}.${key}`).index();
+  $(`#cell_${index.row}_${index.column}`).html(val);
+};
+
+sock.onopen = function () {};
+
+/**
+ * Listens for incoming messages on the WebSocket-Connection from the server.
+ * Acts depending on the received message.
+ * @param message
+ */
 sock.onmessage = function (message) {
   const msg = JSON.parse(message.data);
 
   if (msg.type === 'html') {
+    $(`#${msg.div}`).html(msg.code);
     if (msg.div === 'content' && msg.code !== '') {
-      $(`#${msg.div}`).html(msg.code);
       myTable = initTable();
-    } else {
-      $(`#${msg.div}`).html(msg.code);
     }
   }
   if (msg.type === 'cookie') {
@@ -27,62 +81,229 @@ sock.onmessage = function (message) {
       Cookies.remove(msg.cookie);
     }
     if (msg.function === 'get') {
-      const myCookie = Cookies.get(msg.cookie);
+      let myCookie = Cookies.get(msg.cookie);
 
-      if (myCookie) {
-        sock.send(JSON.stringify({ type: 'cookie', cookie: msg.cookie, value: myCookie }));
-      } else {
-        sock.send(JSON.stringify({ type: 'cookie', cookie: msg.cookie, value: false }));
+      if (!myCookie) {
+        myCookie = false;
       }
+      sock.send(JSON.stringify({ type: 'cookie', cookie: msg.cookie, value: myCookie }));
+    }
+  }
+  if (msg.type === 'cell') {
+    if (msg.function === 'update') {
+      const key = msg.data.id;
+      const col = msg.data.col;
+      const val = msg.data.value;
+
+      updateCell(key, col, val);
     }
   }
   if (msg.type === 'views') {
     if (msg.function === 'addButtons') {
       if (myTable) {
-        let view = msg.data;
+        const view = msg.data;
         for (let i = 0; i < view.length; i++) {
-          myTable.button().add(`2-${i}`, {
-            text: view[i].data.name,
-            id: view[i]._id,
-            className: 'dt-button buttons-collection',
-            action (e, dt, node, config) {
-              myTable.order(view[i].data.order);
-              jQuery.each(view[i].data.columns, (key, set) => {
-                myTable.column(set.id).visible(set.visibility);
-                if (set.filter) {
-                  $(`#input_${myTable.column(set.id).header().innerHTML}`).val(set.filter);
-                  myTable.column(set.id).search(set.filter);
-                }
-              });
-              myTable.draw();
-            }
-          });
-          myTable.button().add(`3-${i}`, {
-            text: view[i].data.name,
-            id: view[i]._id,
-            className: 'dt-button buttons-collection',
-            action (e, dt, node, config) {
-              if (confirm('Are you sure you want to delete this view?') === true) {
-                sock.send(JSON.stringify({type: 'deleteView', id: config.id}));
-              }
-            }
-          });
+          addLoadButton(view, i);
+          addDeleteButton(view, i);
         }
       }
     }
   }
 };
 
-const showLogNot = () => {
-  $('#divLog').html('');
-};
-
+/**
+ * Reads the login-form and sends the Data on WS to the server.
+ */
 const login = () => {
+
   const username = $('#username').val();
   const password = $('#password').val();
 
   sock.send(JSON.stringify({ type: 'login', data: { user: username, pwd: password }}));
 };
+
+/**
+ * Sends the logout-information on WS to the server.
+ */
 const logout = () => {
   sock.send(JSON.stringify({ type: 'logout' }));
+};
+
+window.addEventListener('resize', () => {
+  viewheight = window.innerHeight - hfspace;
+  $('div.dataTables_scrollBody').height(viewheight);
+});
+
+const initTable = () => {
+  /**
+   * Set Searchfields in Columnheaders
+   */
+
+  const table = $('#motable').DataTable({
+    scrollX: true,
+    scrollY: viewheight,
+    scroller: true,
+    columnDefs: [
+      { targets: '_all', visible: true },
+      { targets: '_all', visible: false }
+    ],
+    dom: 'Brtip',
+    buttons: [
+      {
+        extend: 'colvis',
+        collectionLayout: 'fixed four-column'
+      },
+      {
+        text: 'Save View',
+        action (e, dt, node, config) {
+          // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+          const sname = prompt('Enter Savename to Save');
+
+          if (sname !== null && /^\w+$/.test(sname)) {
+            const setting = { columns: {}};
+            setting.name = sname;
+            table.columns().every(function () {
+              const column = {
+                id: this.index(),
+                title: this.header().innerHTML,
+                visibility: this.visible(),
+                filter: $(`#input_${this.header().innerHTML.replace('$', '0x24').replace(' - ', '')}`).val()
+              };
+
+              setting.columns[this.index()] = column;
+            });
+            setting.order = table.order();
+            sock.send(JSON.stringify({ type: 'saveView', data: setting }));
+          }
+        }
+      },
+      {
+        extend: 'collection',
+        text: 'Load View',
+        buttons: []
+      },
+      {
+        extend: 'collection',
+        text: 'Delete View',
+        buttons: []
+      },
+      {
+        extend: 'collection',
+        text: 'Export',
+        autoclose: true,
+        buttons:
+          [
+            {
+              text: 'Clipboard',
+              extend: 'copyHtml5',
+              exportOptions: {
+                columns: ':visible'
+              }
+            },
+            {
+              text: 'xlsx-File',
+              extend: 'excelHtml5',
+              exportOptions: {
+                columns: ':visible'
+              }
+            },
+            {
+              text: 'csv-File',
+              extend: 'csv',
+              exportOptions: {
+                columns: ':visible'
+              }
+            },
+            {
+              text: 'Printview',
+              extend: 'print',
+              exportOptions: {
+                columns: ':visible'
+              }
+            }
+          ]
+      },
+      {
+        text: 'Editor',
+        action (e, dt, node, config) {
+          const focusCell = table.cell({focused: true});
+
+          if (edit) {
+            node.css('background', 'white');
+            if (focusCell.length === 1) {
+              table.cell({focused: true}).data(focusCell.data());
+            }
+            edit = false;
+          } else {
+            node.css('background', '#ff4d4d');
+            if (focusCell.length === 1) {
+              $(`#cell_${focusCell.index().row}_${focusCell.index().column}`).html(`<input class="tblinput" id="tblinput_${focusCell.index().row}_${focusCell.index().column}" value="${focusCell.data()}">`);
+              $(`#tblinput_${focusCell.index().row}_${focusCell.index().column}`).focus().select();
+            }
+            edit = true;
+          }
+        }
+      }
+
+    ],
+    ordering: true,
+    info: false,
+    keys: true
+  });
+
+  table.columns().every(function () {
+    const val = this.header().innerHTML;
+    const that = this;
+    $(`#input_${val.replace('$', '0x24').replace(' - ', '')}`).on('keyup change', function () {
+      console.log(this.value);
+      if (that.search() !== this.value) {
+        that.search(this.value).draw();
+      }
+    });
+  });
+
+  table.on('key', (e, datatable, key, cell, originalEvent) => {
+    if (edit) {
+      /* TO DO
+      * Taste prüfen:
+      * Pfeiltasten links und rechts Textcursor bewegen und nicht Zelle wechseln
+      * Enter Zelle nach rechts
+      * Shift-Enter Zelle nach links
+      * */
+    }
+  }).
+    on('key-focus', (e, datatable, cell, originalEvent) => {
+      const row = cell.index().row;
+      const col = cell.index().column;
+
+      if (edit && table.column(col).header().innerHTML.split(' - ').length === 1) {
+        $(`#cell_${row}_${col}`).html(`<input class="tblinput" id="tblinput_${row}_${col}" value="${cell.data()}">`);
+        $(`#tblinput_${row}_${col}`).focus().select();
+      }
+    }).
+    on('key-blur', (e, datatable, cell, originalEvent) => {
+      const row = cell.index().row;
+      const col = cell.index().column;
+
+      if (edit && table.column(col).header().innerHTML.split(' - ').length === 1) {
+        if (cell.data() !== $(`#tblinput_${row}_${col}`).val()) {
+          const pre = cell.data();
+
+          cell.data($(`#tblinput_${row}_${col}`).val());
+          sock.send(JSON.stringify({
+            type: 'saveChange',
+            key: $(`#cell_${row}_${table.column(0).index()}`).html(),
+            prop: table.column(col).header().innerHTML,
+            pre,
+            data: cell.data()
+          }));
+        } else {
+          cell.data($(`#tblinput_${cell.index().row}_${cell.index().column}`).val());
+        }
+      }
+    });
+
+  sock.send(JSON.stringify({ type: 'getViews' }));
+
+  return table;
 };
