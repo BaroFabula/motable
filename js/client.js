@@ -2,8 +2,6 @@
 
 'use strict';
 
-
-
 const sock = new WebSocket('ws://localhost:3000');
 const hfspace = 200;
 let viewheight = window.innerHeight - hfspace;
@@ -51,9 +49,33 @@ const addDeleteButton = (view, i) => {
     }
   });
 };
+/*
+const checkKeyTableStatus = key => {
+  switch (key) {
+    case 40:
+    case 38:
+    case 13:
+    case 9:
+      myTable.keys.enable();
+      break;
+    default:
+      break;
+  }
+  console.log(key);
+};
 
+const removeListenerToTextfield = id => {
+  $(`#${id}`).off();
+};
+
+const addListenerToTextfield = id => {
+  console.log(event.keyCode);
+  $(`#${id}`).on('keydown', checkKeyTableStatus(event.keyCode));
+};
+*/
 const updateCell = (key, col, val) => {
   const index = myTable.cell(`.${col}.${key}`).index();
+
   $(`#cell_${index.row}_${index.column}`).html(val);
 };
 
@@ -230,16 +252,21 @@ const initTable = () => {
 
           if (edit) {
             node.css('background', 'white');
+            /*
             if (focusCell.length === 1) {
               table.cell({focused: true}).data(focusCell.data());
             }
+            */
             edit = false;
           } else {
             node.css('background', '#ff4d4d');
+            /*
             if (focusCell.length === 1) {
               $(`#cell_${focusCell.index().row}_${focusCell.index().column}`).html(`<input class="tblinput" id="tblinput_${focusCell.index().row}_${focusCell.index().column}" value="${focusCell.data()}">`);
               $(`#tblinput_${focusCell.index().row}_${focusCell.index().column}`).focus().select();
+              addListenerToTextfield(`tblinput_${focusCell.index().row}_${focusCell.index().column}`);
             }
+            */
             edit = true;
           }
         }
@@ -248,7 +275,9 @@ const initTable = () => {
     ],
     ordering: true,
     info: false,
-    keys: true
+    keys: {
+      keys: [ 38, 40, 13, 9, 16, 17, 18 ]
+    }
   });
 
   table.columns().every(function () {
@@ -264,12 +293,16 @@ const initTable = () => {
 
   table.on('key', (e, datatable, key, cell, originalEvent) => {
     if (edit) {
-      /* TO DO
-      * Taste prüfen:
-      * Pfeiltasten links und rechts Textcursor bewegen und nicht Zelle wechseln
-      * Enter Zelle nach rechts
-      * Shift-Enter Zelle nach links
-      * */
+      switch (key) {
+        case 13:
+          const CurTableIndexs = table.rows().indexes();
+          const index = table.cell({ focused: true }).index();
+          const CurIndexArrayKey = CurTableIndexs.indexOf(index.row);
+          const nextRow = CurTableIndexs[CurIndexArrayKey + 1];
+          table.cell(`#cell_${nextRow}_${index.column}`).focus();
+          break;
+        default: break;
+      }
     }
   }).
     on('key-focus', (e, datatable, cell, originalEvent) => {
