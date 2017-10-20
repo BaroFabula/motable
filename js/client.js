@@ -89,47 +89,52 @@ sock.onopen = function () {};
 sock.onmessage = function (message) {
   const msg = JSON.parse(message.data);
 
-  if (msg.type === 'html') {
-    $(`#${msg.div}`).html(msg.code);
-    if (msg.div === 'content' && msg.code !== '') {
-      myTable = initTable();
-    }
-  }
-  if (msg.type === 'cookie') {
-    if (msg.function === 'set') {
-      Cookies.set(msg.cookie, msg.value);
-    }
-    if (msg.function === 'rm') {
-      Cookies.remove(msg.cookie);
-    }
-    if (msg.function === 'get') {
-      let myCookie = Cookies.get(msg.cookie);
-
-      if (!myCookie) {
-        myCookie = false;
+  switch (msg.type) {
+    case 'html':
+      $(`#${msg.div}`).html(msg.code);
+      if (msg.div === 'content' && msg.code !== '') {
+        myTable = initTable();
       }
-      sock.send(JSON.stringify({ type: 'cookie', cookie: msg.cookie, value: myCookie }));
-    }
-  }
-  if (msg.type === 'cell') {
-    if (msg.function === 'update') {
-      const key = msg.data.id;
-      const col = msg.data.col;
-      const val = msg.data.value;
+      break;
+    case 'cookie':
+      switch (msg.function) {
+        case 'set':
+          Cookies.set(msg.cookie, msg.value);
+          break;
+        case 'rm':
+          Cookies.remove(msg.cookie);
+          break;
+        case 'get':
+          let myCookie = Cookies.get(msg.cookie);
+          if (!myCookie) {
+            myCookie = false;
+          }
+          sock.send(JSON.stringify({ type: 'cookie', cookie: msg.cookie, value: myCookie }));
+          break;
+        default:break;
+      }
+      break;
+    case 'cell':
+      if (msg.function === 'update') {
+        const key = msg.data.id;
+        const col = msg.data.col;
+        const val = msg.data.value;
 
-      updateCell(key, col, val);
-    }
-  }
-  if (msg.type === 'views') {
-    if (msg.function === 'addButtons') {
-      if (myTable) {
-        const view = msg.data;
-        for (let i = 0; i < view.length; i++) {
-          addLoadButton(view, i);
-          addDeleteButton(view, i);
+        updateCell(key, col, val);
+      }
+      break;
+    case 'views':
+      if (msg.function === 'addButtons') {
+        if (myTable) {
+          const view = msg.data;
+          for (let i = 0; i < view.length; i++) {
+            addLoadButton(view, i);
+            addDeleteButton(view, i);
+          }
         }
       }
-    }
+      break;
+    default:break;
   }
 };
 
@@ -252,21 +257,19 @@ const initTable = () => {
 
           if (edit) {
             node.css('background', 'white');
-            /*
             if (focusCell.length === 1) {
-              table.cell({focused: true}).data(focusCell.data());
+              table.cell({ focused: true }).data(focusCell.data());
             }
-            */
             edit = false;
           } else {
             node.css('background', '#ff4d4d');
-            /*
             if (focusCell.length === 1) {
+              /*
               $(`#cell_${focusCell.index().row}_${focusCell.index().column}`).html(`<input class="tblinput" id="tblinput_${focusCell.index().row}_${focusCell.index().column}" value="${focusCell.data()}">`);
               $(`#tblinput_${focusCell.index().row}_${focusCell.index().column}`).focus().select();
               addListenerToTextfield(`tblinput_${focusCell.index().row}_${focusCell.index().column}`);
+              */
             }
-            */
             edit = true;
           }
         }

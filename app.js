@@ -362,33 +362,36 @@ wsServer.on('connection', socket => {
     winston.log('info', `WS Message Received: ${message}`);
     const msg = JSON.parse(message);
 
-    if (msg.type === 'cookie') {
-      session = msg.value;
-      winston.log('warn', session);
-      if (msg.value) {
-        sendHtml(socket, 'divLog', htmlLogout);
-        getDataCookie(socket, msg.value);
-      } else {
-        sendHtml(socket, 'divLog', htmlLogin);
-      }
-    }
-    if (msg.type === 'login') {
-      getDataUser(socket, msg.data.user, msg.data.pwd);
-    }
-    if (msg.type === 'logout') {
-      logout(socket);
-    }
-    if (msg.type === 'saveView') {
-      createViewDocument(socket, session, msg);
-    }
-    if (msg.type === 'deleteView') {
-      deleteViewDocument(socket, session, msg.id.$oid);
-    }
-    if (msg.type === 'getViews') {
-      getViewDocuments(socket, session, msg);
-    }
-    if (msg.type === 'saveChange') {
-      changeValue(socket, session, msg);
+    switch (msg.type) {
+      case 'cookie':
+        session = msg.value;
+        winston.log('warn', session);
+        if (msg.value) {
+          sendHtml(socket, 'divLog', htmlLogout);
+          getDataCookie(socket, msg.value);
+        } else {
+          sendHtml(socket, 'divLog', htmlLogin);
+        }
+        break;
+      case 'login':
+        getDataUser(socket, msg.data.user, msg.data.pwd);
+        break;
+      case 'logout':
+        logout(socket);
+        break;
+      case 'saveView':
+        createViewDocument(socket, session, msg);
+        break;
+      case 'deleteView':
+        deleteViewDocument(socket, session, msg.id.$oid);
+        break;
+      case 'getViews':
+        getViewDocuments(socket, session, msg);
+        break;
+      case 'saveChange':
+        changeValue(socket, session, msg);
+        break;
+      default:break;
     }
   });
 });
