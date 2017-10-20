@@ -117,9 +117,9 @@ sock.onmessage = function (message) {
 
 /**
  * Reads the login-form and sends the Data on WS to the server.
+ * This function is called from the Login-Button.
  */
 const login = () => {
-
   const username = $('#username').val();
   const password = $('#password').val();
 
@@ -128,11 +128,16 @@ const login = () => {
 
 /**
  * Sends the logout-information on WS to the server.
+ * This function is called from the Logout-Button.
  */
 const logout = () => {
   sock.send(JSON.stringify({ type: 'logout' }));
 };
 
+/**
+ * EventListener reacts when resizing the window and adapts the size of the div, that shows the window.
+ * This way the Website always fits into the browserwindow and only scrolls within the table.
+ */
 window.addEventListener('resize', () => {
   viewheight = window.innerHeight - hfspace;
   $('div.dataTables_scrollBody').height(viewheight);
@@ -140,7 +145,7 @@ window.addEventListener('resize', () => {
 
 const initTable = () => {
   /**
-   * Set Searchfields in Columnheaders
+   * Initializes the DataTable onto the HTML-table.
    */
 
   const table = $('#motable').DataTable({
@@ -160,7 +165,9 @@ const initTable = () => {
       {
         text: 'Save View',
         action (e, dt, node, config) {
-          // CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+          /**
+           * CREATING AN JSON OBJECT CONTAINING THE AKTUELL FILTERS, SORTING AND VISIBILITIES
+           */
           const sname = prompt('Enter Savename to Save');
 
           if (sname !== null && /^\w+$/.test(sname)) {
@@ -256,8 +263,8 @@ const initTable = () => {
   table.columns().every(function () {
     const val = this.header().innerHTML;
     const that = this;
+
     $(`#input_${val.replace('$', '0x24').replace(' - ', '')}`).on('keyup change', function () {
-      console.log(this.value);
       if (that.search() !== this.value) {
         that.search(this.value).draw();
       }
@@ -272,6 +279,7 @@ const initTable = () => {
           const index = table.cell({ focused: true }).index();
           const CurIndexArrayKey = CurTableIndexs.indexOf(index.row);
           const nextRow = CurTableIndexs[CurIndexArrayKey + 1];
+
           table.cell(`#cell_${nextRow}_${index.column}`).focus();
           break;
         default: break;

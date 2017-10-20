@@ -20,7 +20,6 @@ const htmlLogout = fs.readFileSync(path.join(__dirname, 'client', 'logout.html')
 
 const broadcast = msg => {
   wsServer.clients.forEach(client => {
-    console.log(client);
     client.send(JSON.stringify(msg));
   });
 };
@@ -120,8 +119,6 @@ wsServer.on('connection', socket => {
 
   const getData = (socket, options) => {
     https.get(options, res => {
-      console.log('STATUS: ' + res.statusCode);
-      console.log('HEADERS: ' + JSON.stringify(res.headers));
       res.setEncoding('utf8');
       if (res.statusCode != 200) {
         sendHtml(socket, 'content', 'The connection to the Datenbase isn\'t working properly.');
@@ -136,7 +133,6 @@ wsServer.on('connection', socket => {
 
           if (result.status === 200) {
             winston.log('info', `${result.status}`);
-            console.log('test');
             const tbl = getTable(JSON.parse(chunk).results);
 
             sendHtml(socket, 'divLog', htmlLogout);
@@ -174,9 +170,7 @@ wsServer.on('connection', socket => {
     );
   };
 
-  // TODO
   const updateDatafield = (socket, session, msg) => {
-    console.log(msg);
     const header = {
       host: 'trapdb.kskserver.de',
       path: `/api/patients/${msg.key}`,
@@ -268,19 +262,17 @@ wsServer.on('connection', socket => {
     };
     const postData = JSON.stringify(myObject);
     const req = https.request(options, (res) => {
-      console.log(`STATUS: ${res.statusCode}`);
-      console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
       res.setEncoding('utf8');
       res.on('data', (chunk) => {
-        console.log(`BODY: ${chunk}`);
+        winston.log('info', `BODY: ${chunk}`);
       });
       res.on('end', () => {
-        console.log('No more data in response.');
+        winston.log('info', 'No more data in response.');
       });
     });
 
     req.on('error', (e) => {
-      console.error(`problem with request: ${e.message}`);
+      winston.log('error', `problem with request: ${e.message}`);
     });
 
     req.write(postData);
@@ -297,14 +289,10 @@ wsServer.on('connection', socket => {
       }
     };
     const req = https.request(options, (res) => {
-      console.log(`STATUS: ${res.statusCode}`);
-      console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
       res.setEncoding('utf8');
       res.on('data', (chunk) => {
-        console.log(`BODY: ${chunk}`);
       });
       res.on('end', () => {
-        console.log('No more data in response.');
       });
     });
 
@@ -325,7 +313,6 @@ wsServer.on('connection', socket => {
     };
     const prop = msg.prop.split(' - ');
 
-    console.log(prop);
     const createData = (array) => {
       if(array.length > 1){
         console.log('Editor for Objects is not supported yet');
@@ -337,14 +324,10 @@ wsServer.on('connection', socket => {
     const postData = createData(prop);
 
     const req = https.request(options, (res) => {
-      console.log(`STATUS: ${res.statusCode}`);
-      console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
       res.setEncoding('utf8');
       res.on('data', (chunk) => {
-        console.log(`BODY: ${chunk}`);
       });
       res.on('end', () => {
-        console.log('No more data in response.');
         updateDatafield(socket, session, msg);
       });
     });
