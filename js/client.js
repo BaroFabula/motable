@@ -49,30 +49,7 @@ const addDeleteButton = (view, i) => {
     }
   });
 };
-/*
-const checkKeyTableStatus = key => {
-  switch (key) {
-    case 40:
-    case 38:
-    case 13:
-    case 9:
-      myTable.keys.enable();
-      break;
-    default:
-      break;
-  }
-  console.log(key);
-};
 
-const removeListenerToTextfield = id => {
-  $(`#${id}`).off();
-};
-
-const addListenerToTextfield = id => {
-  console.log(event.keyCode);
-  $(`#${id}`).on('keydown', checkKeyTableStatus(event.keyCode));
-};
-*/
 const updateCell = (key, col, val) => {
   const index = myTable.cell(`.${col}.${key}`).index();
 
@@ -253,7 +230,7 @@ const initTable = () => {
       {
         text: 'Editor',
         action (e, dt, node, config) {
-          const focusCell = table.cell({focused: true});
+          const focusCell = table.cell({ focused: true });
 
           if (edit) {
             node.css('background', 'white');
@@ -263,13 +240,6 @@ const initTable = () => {
             edit = false;
           } else {
             node.css('background', '#ff4d4d');
-            if (focusCell.length === 1) {
-              /*
-              $(`#cell_${focusCell.index().row}_${focusCell.index().column}`).html(`<input class="tblinput" id="tblinput_${focusCell.index().row}_${focusCell.index().column}" value="${focusCell.data()}">`);
-              $(`#tblinput_${focusCell.index().row}_${focusCell.index().column}`).focus().select();
-              addListenerToTextfield(`tblinput_${focusCell.index().row}_${focusCell.index().column}`);
-              */
-            }
             edit = true;
           }
         }
