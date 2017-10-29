@@ -185,6 +185,8 @@ const initTable = () => {
             });
             setting.order = table.order();
             sock.send(JSON.stringify({ type: 'saveView', data: setting }));
+          } else {
+            window.alert('Error while saving: The Savename may only contain letters and numbers!');
           }
         }
       },
