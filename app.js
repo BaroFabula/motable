@@ -384,12 +384,10 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use('/js', express.static(path.join(__dirname, 'datatables')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 
-// app.use('/css', express.static(path.join(__dirname, 'datatables')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css')));
 app.use('/css', express.static(path.join(__dirname, 'sass')));
 
